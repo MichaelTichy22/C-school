@@ -4,3 +4,10 @@ C:\Users\st52567\Documents\Cshp-school\Cv01\Cv01.2\bin\Debug\Cv01.2.pdb
 C:\Users\st52567\Documents\Cshp-school\Cv01\Cv01.2\obj\Debug\Cv01.2.csproj.CoreCompileInputs.cache
 C:\Users\st52567\Documents\Cshp-school\Cv01\Cv01.2\obj\Debug\Cv01.2.exe
 C:\Users\st52567\Documents\Cshp-school\Cv01\Cv01.2\obj\Debug\Cv01.2.pdb
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.2\bin\Debug\Cv01.2.exe.config
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.2\bin\Debug\Cv01.2.exe
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.2\bin\Debug\Cv01.2.pdb
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.2\obj\Debug\Cv01.2.csprojResolveAssemblyReference.cache
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.2\obj\Debug\Cv01.2.csproj.CoreCompileInputs.cache
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.2\obj\Debug\Cv01.2.exe
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.2\obj\Debug\Cv01.2.pdb

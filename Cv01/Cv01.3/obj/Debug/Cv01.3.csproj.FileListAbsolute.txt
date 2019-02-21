@@ -1,0 +1,6 @@
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.3\bin\Debug\Cv01.3.exe.config
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.3\bin\Debug\Cv01.3.exe
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.3\bin\Debug\Cv01.3.pdb
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.3\obj\Debug\Cv01.3.csproj.CoreCompileInputs.cache
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.3\obj\Debug\Cv01.3.exe
+D:\Programování\C#\Projekty\škola\Cshp-school\Cv01\Cv01.3\obj\Debug\Cv01.3.pdb
