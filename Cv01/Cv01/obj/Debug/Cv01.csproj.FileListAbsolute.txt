@@ -1,0 +1,7 @@
+C:\Users\st52567\Documents\Cshp-school\Cv01\Cv01\bin\Debug\Cv01.exe.config
+C:\Users\st52567\Documents\Cshp-school\Cv01\Cv01\bin\Debug\Cv01.exe
+C:\Users\st52567\Documents\Cshp-school\Cv01\Cv01\bin\Debug\Cv01.pdb
+C:\Users\st52567\Documents\Cshp-school\Cv01\Cv01\obj\Debug\Cv01.csprojResolveAssemblyReference.cache
+C:\Users\st52567\Documents\Cshp-school\Cv01\Cv01\obj\Debug\Cv01.csproj.CoreCompileInputs.cache
+C:\Users\st52567\Documents\Cshp-school\Cv01\Cv01\obj\Debug\Cv01.exe
+C:\Users\st52567\Documents\Cshp-school\Cv01\Cv01\obj\Debug\Cv01.pdb
