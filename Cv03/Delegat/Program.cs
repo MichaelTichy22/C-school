@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Fei.BaseLib;
 
 namespace Delegat
 {
@@ -10,7 +11,7 @@ namespace Delegat
     {
         public static Students CreateArrayOfStudents(Students students)
         {
-            int[] array = new int[8];
+            Student[] array = students.StudentsArray;
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = Reading.ReadInt();
