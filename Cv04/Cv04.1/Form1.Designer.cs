@@ -37,8 +37,8 @@
             this.correctLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.missedLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.accuracyLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.difficultyBar = new System.Windows.Forms.ToolStripProgressBar();
             this.difficultyLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.difficultyBar = new System.Windows.Forms.ToolStripProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -68,6 +68,8 @@
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.HorizontalExtent = 15;
+            this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 61;
             this.listBox1.Location = new System.Drawing.Point(0, 27);
             this.listBox1.Name = "listBox1";
@@ -107,12 +109,6 @@
             this.accuracyLabel.Size = new System.Drawing.Size(78, 17);
             this.accuracyLabel.Text = "Accuracy: 0%";
             // 
-            // difficultyBar
-            // 
-            this.difficultyBar.Maximum = 800;
-            this.difficultyBar.Name = "difficultyBar";
-            this.difficultyBar.Size = new System.Drawing.Size(100, 16);
-            // 
             // difficultyLabel
             // 
             this.difficultyLabel.Name = "difficultyLabel";
@@ -120,6 +116,12 @@
             this.difficultyLabel.Spring = true;
             this.difficultyLabel.Text = "Difficulty";
             this.difficultyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // difficultyBar
+            // 
+            this.difficultyBar.Maximum = 800;
+            this.difficultyBar.Name = "difficultyBar";
+            this.difficultyBar.Size = new System.Drawing.Size(100, 16);
             // 
             // timer1
             // 
