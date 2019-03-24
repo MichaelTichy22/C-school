@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.endButton = new System.Windows.Forms.Button();
             this.cancleButton = new System.Windows.Forms.Button();
@@ -41,7 +41,7 @@
             this.nameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clubCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goalsCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.logList = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerTable)).BeginInit();
             this.SuspendLayout();
@@ -141,14 +141,14 @@
             this.nameCol,
             this.clubCol,
             this.goalsCol});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.playerTable.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.playerTable.DefaultCellStyle = dataGridViewCellStyle1;
             this.playerTable.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.playerTable.Location = new System.Drawing.Point(12, 12);
             this.playerTable.Name = "playerTable";
@@ -170,21 +170,21 @@
             this.goalsCol.HeaderText = "Góly";
             this.goalsCol.Name = "goalsCol";
             // 
-            // listBox1
+            // logList
             // 
-            this.listBox1.Enabled = false;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(13, 251);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(426, 108);
-            this.listBox1.TabIndex = 2;
+            this.logList.Enabled = false;
+            this.logList.FormattingEnabled = true;
+            this.logList.Location = new System.Drawing.Point(13, 251);
+            this.logList.Name = "logList";
+            this.logList.Size = new System.Drawing.Size(426, 108);
+            this.logList.TabIndex = 2;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 369);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.logList);
             this.Controls.Add(this.playerTable);
             this.Controls.Add(this.panel1);
             this.Name = "MainForm";
@@ -206,7 +206,7 @@
         private System.Windows.Forms.Button removeButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.DataGridView playerTable;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox logList;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn clubCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn goalsCol;

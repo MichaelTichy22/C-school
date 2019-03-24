@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Cv05
 {
-    class Hrac
+    class Player
     {
+        public string Name { get; set; }
+        public FootballClub Club { get; set; }
+        public int NumberOfGoals { get; set; }
+
+        public Player(string name, FootballClub club, int numberOfGoals)
+        {
+            Name = name;
+            Club = club;
+            NumberOfGoals = numberOfGoals;
+        }
     }
 }

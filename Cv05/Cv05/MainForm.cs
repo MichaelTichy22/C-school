@@ -12,20 +12,31 @@ namespace Cv05
 {
     public partial class MainForm : Form
     {
+        Players players;
+
         public MainForm()
         {
             InitializeComponent();
+            players = new Players(100);
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
             PlayerForm playerForm = new PlayerForm();
-            playerForm.ShowDialog();
+            if (playerForm.ShowDialog() == DialogResult.OK)
+            {
+                players.Add(playerForm.NewPlayer);
+                playerTable.Rows.Add(playerForm.NewPlayer.Name, playerForm.NewPlayer.Club, playerForm.NewPlayer.NumberOfGoals);
+                logList.Items.Add("Hráč "+ playerForm.NewPlayer.Name + " byl vložen.");
+
+            }
         }
 
         private void removeButton_Click(object sender, EventArgs e)
         {
-
+            players.Remove(playerTable.CurrentCell.RowIndex);
+            playerTable.Rows.RemoveAt(playerTable.CurrentCell.RowIndex);
+            logList.Items.Add("Hráč byl smazán");
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -52,7 +63,12 @@ namespace Cv05
 
         private void endButton_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
+
+        //private void RefreshList()
+        //{
+        //    playerTable.DataSource = players.players;
+        //}
     }
 }

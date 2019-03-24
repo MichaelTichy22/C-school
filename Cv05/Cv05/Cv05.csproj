@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FootballClubInfo.cs" />
+    <Compile Include="FootballClub.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="PlayerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +66,7 @@
     <Compile Include="BestClubForm.Designer.cs">
       <DependentUpon>BestClubForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Players.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BestClubForm.resx">
