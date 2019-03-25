@@ -12,9 +12,18 @@ namespace Cv05
 {
     public partial class BestClubForm : Form
     {
+        public List<FootballClub> BestClubs { get; set; }
+        public int NumberOfGoals { get; set; }
         public BestClubForm()
         {
             InitializeComponent();
+        }
+
+        public void SetForm()
+        {
+            goalsText.Text = NumberOfGoals.ToString();
+
+            clubsList.DataSource = BestClubs;
         }
     }
 }

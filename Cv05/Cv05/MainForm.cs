@@ -28,7 +28,6 @@ namespace Cv05
                 players.Add(playerForm.NewPlayer);
                 playerTable.Rows.Add(playerForm.NewPlayer.Name, playerForm.NewPlayer.Club, playerForm.NewPlayer.NumberOfGoals);
                 logList.Items.Add("Hráč "+ playerForm.NewPlayer.Name + " byl vložen.");
-
             }
         }
 
@@ -47,6 +46,12 @@ namespace Cv05
         private void bestButton_Click(object sender, EventArgs e)
         {
             BestClubForm bestClubForm = new BestClubForm();
+            List<FootballClub> bestClubs = new List<FootballClub>();
+            int numberOfGoals = 0;
+            players.FindTheBestClubs(bestClubs, out numberOfGoals);
+            bestClubForm.BestClubs = bestClubs;
+            bestClubForm.NumberOfGoals = numberOfGoals;
+            bestClubForm.SetForm();
             bestClubForm.ShowDialog();
 
         }

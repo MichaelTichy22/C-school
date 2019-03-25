@@ -106,6 +106,7 @@
             // 
             // clubCombo
             // 
+            this.clubCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.clubCombo.FormattingEnabled = true;
             this.clubCombo.Location = new System.Drawing.Point(109, 47);
             this.clubCombo.Name = "clubCombo";

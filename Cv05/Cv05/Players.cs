@@ -37,10 +37,11 @@ namespace Cv05
 
         public void Add(Player player)
         {
-            Count++;
+            
             if (Count < capacity)
             {
-                players[Count + 1] = player;
+                players[Count] = player;
+                Count++;
             }
             else
             {
@@ -48,13 +49,36 @@ namespace Cv05
             }
         }
 
-        public void FindTheBestClubs(FootballClub[] bestClubs,int numberOfGoals)
+        public void FindTheBestClubs(List<FootballClub> bestClubs,out int numberOfGoals)
         {
-            int[] goals = new int[6];
+            Dictionary<FootballClub, int> clubs = new Dictionary<FootballClub, int>();
+            foreach (Enum clubEnum in Enum.GetValues(typeof(FootballClub)))
+            {
+                clubs.Add((FootballClub)clubEnum, 0);
+            }
             foreach (Player player in players)
             {
-
+                if (player != null)
+                {
+                    clubs[player.Club] += player.NumberOfGoals;
+                }
+                else
+                {
+                    break;
+                }
             }
+            int max = clubs.Values.Max();
+
+            numberOfGoals = max;
+
+            foreach (KeyValuePair<FootballClub, int> club in clubs)
+            {
+                if (club.Value.Equals(max))
+                {
+                    bestClubs.Add(club.Key);
+                }
+            }
+            
         }
     }
 }

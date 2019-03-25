@@ -46,6 +46,7 @@
             // 
             // goalsText
             // 
+            this.goalsText.Enabled = false;
             this.goalsText.Location = new System.Drawing.Point(15, 26);
             this.goalsText.Name = "goalsText";
             this.goalsText.Size = new System.Drawing.Size(100, 20);
@@ -70,6 +71,7 @@
             // 
             // okButton
             // 
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.okButton.Location = new System.Drawing.Point(206, 227);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);

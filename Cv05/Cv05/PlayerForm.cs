@@ -27,6 +27,26 @@ namespace Cv05
         private void okButton_Click(object sender, EventArgs e)
         {
             Enum.TryParse<FootballClub>(clubCombo.SelectedValue.ToString(), out selectedClub);
+            int a;
+            if (!Int32.TryParse(goalsText.Text, out a))
+            {
+                MessageBox.Show(
+                    "Pole s góly byl vyplněno špatně!",
+                    "Chyba",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                this.DialogResult = DialogResult.None;
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+            }
+        }
+
+        private void goalsText_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }
