@@ -40,7 +40,14 @@ namespace Cv05
 
         private void editButton_Click(object sender, EventArgs e)
         {
-
+            PlayerForm playerForm = new PlayerForm();
+            playerForm.SetForm();
+            playerForm.NewPlayer = players[playerTable.CurrentCell.RowIndex];
+            if (playerForm.ShowDialog() == DialogResult.OK)
+            {
+                this.RefreshList();
+                logList.Items.Add("Hráč " + playerForm.NewPlayer.Name + " byl editován.");
+            }
         }
 
         private void bestButton_Click(object sender, EventArgs e)
@@ -71,9 +78,13 @@ namespace Cv05
             this.Close();
         }
 
-        //private void RefreshList()
-        //{
-        //    playerTable.DataSource = players.players;
-        //}
+        private void RefreshList()
+        {
+            playerTable.Rows.Clear();
+            foreach (Player player in players.players)
+            {
+                playerTable.Rows.Add(player.Name, player.Club, player.NumberOfGoals);
+            }
+        }
     }
 }

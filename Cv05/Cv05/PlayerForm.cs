@@ -44,9 +44,11 @@ namespace Cv05
             }
         }
 
-        private void goalsText_Leave(object sender, EventArgs e)
+        public void SetForm()
         {
-
+            nameText.Text = NewPlayer.Name;
+            clubCombo.SelectedItem = NewPlayer.Club;
+            goalsText.Text = NewPlayer.NumberOfGoals.ToString();
         }
     }
 }
