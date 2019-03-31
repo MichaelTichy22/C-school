@@ -14,6 +14,8 @@ namespace Cv05
     {
         Players players;
 
+        bool events = false;
+
         public MainForm()
         {
             InitializeComponent();
@@ -27,7 +29,11 @@ namespace Cv05
             {
                 players.Add(playerForm.NewPlayer);
                 playerTable.Rows.Add(playerForm.NewPlayer.Name, playerForm.NewPlayer.Club, playerForm.NewPlayer.NumberOfGoals);
-                logList.Items.Add("Hráč "+ playerForm.NewPlayer.Name + " byl vložen.");
+                if (events)
+                {
+                    logList.Items.Add("Hráč " + playerForm.NewPlayer.Name + " byl vložen.");
+
+                }
             }
         }
 
@@ -35,18 +41,25 @@ namespace Cv05
         {
             players.Remove(playerTable.CurrentCell.RowIndex);
             playerTable.Rows.RemoveAt(playerTable.CurrentCell.RowIndex);
-            logList.Items.Add("Hráč byl smazán");
+            if (events)
+            {
+                logList.Items.Add("Hráč byl smazán");
+            }
         }
 
         private void editButton_Click(object sender, EventArgs e)
         {
             PlayerForm playerForm = new PlayerForm();
-            playerForm.SetForm();
-            playerForm.NewPlayer = players[playerTable.CurrentCell.RowIndex];
+            playerForm.SetForm(players[playerTable.CurrentCell.RowIndex]);
+            //playerForm.NewPlayer = players[playerTable.CurrentCell.RowIndex];
             if (playerForm.ShowDialog() == DialogResult.OK)
             {
+                players[playerTable.CurrentCell.RowIndex] = playerForm.NewPlayer;
                 this.RefreshList();
-                logList.Items.Add("Hráč " + playerForm.NewPlayer.Name + " byl editován.");
+                if (events)
+                {
+                    logList.Items.Add("Hráč " + playerForm.NewPlayer.Name + " byl editován.");
+                }
             }
         }
 
@@ -65,12 +78,14 @@ namespace Cv05
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-
+            events = true;
+            logList.Items.Add("Handler událostí registorván");
         }
 
         private void cancleButton_Click(object sender, EventArgs e)
         {
-
+            events = false;
+            logList.Items.Add("Handler událostí zrušen");
         }
 
         private void endButton_Click(object sender, EventArgs e)
@@ -83,6 +98,10 @@ namespace Cv05
             playerTable.Rows.Clear();
             foreach (Player player in players.players)
             {
+                if (player == null)
+                {
+                    break;
+                }
                 playerTable.Rows.Add(player.Name, player.Club, player.NumberOfGoals);
             }
         }

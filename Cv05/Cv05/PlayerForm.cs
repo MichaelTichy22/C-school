@@ -44,11 +44,11 @@ namespace Cv05
             }
         }
 
-        public void SetForm()
+        public void SetForm(Player player)
         {
-            nameText.Text = NewPlayer.Name;
-            clubCombo.SelectedItem = NewPlayer.Club;
-            goalsText.Text = NewPlayer.NumberOfGoals.ToString();
+            nameText.Text = player.Name;
+            clubCombo.SelectedItem = player.Club;
+            goalsText.Text = player.NumberOfGoals.ToString();
         }
     }
 }
