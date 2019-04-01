@@ -51,7 +51,7 @@ namespace Cv05
 
         public void FindTheBestClubs(List<FootballClub> bestClubs,out int numberOfGoals)
         {
-            Dictionary<FootballClub, int> clubs = new Dictionary<FootballClub, int>();
+            IDictionary<FootballClub, int> clubs = new Dictionary<FootballClub, int>();
             foreach (Enum clubEnum in Enum.GetValues(typeof(FootballClub)))
             {
                 clubs.Add((FootballClub)clubEnum, 0);
