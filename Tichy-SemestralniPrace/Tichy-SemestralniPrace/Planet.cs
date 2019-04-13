@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Tichy_SemestralniPrace
 {
@@ -11,8 +12,8 @@ namespace Tichy_SemestralniPrace
         public int UnitCount { get; set; }
 
         const int BORDER_POINT_COUNT = 32;
-        const double CONTACT_POINTS_CONST = 1.0;
-        const double ORBIT_POINTS_CONST = 1.4;
+        const Point CONTACT_POINTS_CONST = 1.0;
+        const Point ORBIT_POINTS_CONST = 1.4;
 
         public override void Refresh(int time)
         {
@@ -25,6 +26,16 @@ namespace Tichy_SemestralniPrace
             {
                 Size = Size * 3;
             }
+
+            if (true)
+            {
+
+            }
+
+        }
+
+        public void ShipArrival(Spaceship spaceship)
+        {
 
         }
     }
