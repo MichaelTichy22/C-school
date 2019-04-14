@@ -9,11 +9,14 @@ namespace Tichy_SemestralniPrace
 {
     class Planet : GameObject
     {
-        public int UnitCount { get; set; }
-
         const int BORDER_POINT_COUNT = 32;
-        const Point CONTACT_POINTS_CONST = 1.0;
-        const Point ORBIT_POINTS_CONST = 1.4;
+        const double CONTACT_POINTS_CONST = 1.0;
+        const double ORBIT_POINTS_CONST = 1.4;
+
+        public int UnitCount { get; set; }
+        public Point ContactPoint { get; }
+        public Point OrbitPoint { get; }
+
 
         public override void Refresh(int time)
         {
@@ -36,7 +39,18 @@ namespace Tichy_SemestralniPrace
 
         public void ShipArrival(Spaceship spaceship)
         {
-
+            if (spaceship.Owner == Owner)
+            {
+                UnitCount += spaceship.UnitsCount;
+            }
+            else
+            {
+                UnitCount -= spaceship.UnitsCount;
+                if (UnitCount < 0)
+                {
+                    Owner = spaceship.Owner;
+                }
+            }
         }
     }
 }
